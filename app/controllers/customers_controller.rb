@@ -11,6 +11,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
 
     if @customer.save
+      sessions[:customer_id] = @customer.id
       redirect_to @customer
     else
       render :new
