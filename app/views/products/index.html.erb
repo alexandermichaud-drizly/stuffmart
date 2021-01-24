@@ -4,7 +4,7 @@
 <ul>
   <% @products.each do |product| %>
     <li>
-      <div class="product-name"><%= product.name %></div>
+      <div class="product-name"><%= link_to product.name, product %></div>
       <div class="product-description"><%= product.description %></div>
       <div class="product-price">$<%= product.price %></div>
       <div class="product-stock"><%= product.stock %> Available</div>
