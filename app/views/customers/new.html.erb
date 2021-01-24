@@ -1,0 +1,21 @@
+<h1>Create Customer Account</h1>
+<p>Enter your information to create an account.</p>
+<p>Only account holders can add products to cart, check out, and view orders</p>
+
+<%= form_with model: @customer do |form| %>
+  <div>
+    <div><%= form.label :name %></div>
+    <div><%= form.text_field :name %></div>
+  </div>
+  <div>
+    <div><%= form.label :email %></div>
+    <div><%= form.text_field :email %></div>
+  </div>
+  <div>
+    <div><%= form.label :password %></div>
+    <div><%= form.text_field :password %></div>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
